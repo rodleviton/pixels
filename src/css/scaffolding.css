@@ -1,0 +1,12 @@
+/* Scaffolding
+ * –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+ body, html {
+   padding: 0;
+   margin: 0;
+   height: 100%;
+ }
+
+ body {
+   background: #F3F3F3;
+ }
