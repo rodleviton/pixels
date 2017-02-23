@@ -10,8 +10,8 @@
 </template>
 
 <script>
-import Card from './../components/Card';
-import CardDetails from './../components/CardDetails';
+import Card from './../components/card';
+import CardDetails from './../components/card-details';
 
 export default {
   name: 'card-view',

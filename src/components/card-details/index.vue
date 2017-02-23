@@ -1,28 +1,26 @@
 <template>
   <div class="card-details">
     <div class="card-details-inner">
-      <h2>Griddy</h2>
+      <h2>{{ title }}</h2>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut egestas sollicitudin urna, non semper nulla. Maecenas iaculis nisl ac ex posuere, et finibus velit interdum. Praesent tortor felis, elementum at semper et, tincidunt placerat arcu. Proin vel posuere risus. Integer quis quam finibus, aliquet libero sit amet, iaculis eros. Maecenas porttitor mollis semper.</p>
+      <div v-html="description"></div>
 
       <h3>Highights</h3>
       <ul>
-        <li><span>HTML5 Canvas</span></li>
-        <li><span>CSS3 Transitions</span></li>
+        <li v-for="highlight in highlights"><span>{{ highlight }}</span></li>
       </ul>
 
       <ColourBar :colours="colours"></ColourBar>
 
       <footer class="details-footer">
-
-        <a href="" target="_blank" class="link-btn"><i class="icon-github"></i> View source</a>
+        <a v-bind:href="source" target="_blank" class="link-btn"><i class="icon-github"></i> View source</a>
       </footer>
     </div>
   </div>
 </template>
 
 <script>
-import ColourBar from './ColourBar';
+import ColourBar from './../colour-bar';
 
 export default {
   components: {
@@ -30,6 +28,8 @@ export default {
   },
   data() {
     return {
+      title: 'Griddy',
+      description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut egestas sollicitudin urna, non semper nulla. Maecenas iaculis nisl ac ex posuere, et finibus velit interdum. Praesent tortor felis, elementum at semper et, tincidunt placerat arcu. Proin vel posuere risus. Integer quis quam finibus, aliquet libero sit amet, iaculis eros. Maecenas porttitor mollis semper.</p>',
       colours: [
         '#7FC6FF',
         '#488CFF',
@@ -37,6 +37,11 @@ export default {
         '#373F96',
         '#272D6B',
       ],
+      highlights: [
+        'HTML5 Canvas',
+        'CSS3 Transitions',
+      ],
+      source: 'https://github.com/swanky-docs/swanky',
     };
   },
 };
@@ -49,6 +54,7 @@ export default {
   text-align: left;
   width: 100%;
   position: relative;
+  overflow: auto;
 }
 
 .card-details-inner {
@@ -74,6 +80,13 @@ export default {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+  }
+}
+
+@media screen and ( max-height: 600px ){
+  .card-details-inner {
+    top: 0;
+    transform: translateY(0);
   }
 }
 
@@ -109,6 +122,6 @@ export default {
   margin-right: 10px;
   width: 33px;
   height: 32px;
-  background: url('./../assets/github.svg');
+  background: url('./img/github.svg');
 }
 </style>

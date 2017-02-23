@@ -38,6 +38,6 @@ export default {
   width: 15px;
   height: 22px;
   margin-right: 2rem;
-  background: url('./../assets/droplet.svg');
+  background: url('./img/droplet.svg');
 }
 </style>

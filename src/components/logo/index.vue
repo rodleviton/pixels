@@ -20,6 +20,6 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background: url('./../assets/logo.svg') no-repeat;
+  background: url('./img/logo.svg') no-repeat;
 }
 </style>

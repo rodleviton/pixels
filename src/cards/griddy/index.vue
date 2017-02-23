@@ -1,12 +1,11 @@
 <template>
   <div class="griddy">
     <canvas ref="griddy" width="320" height="460"></canvas>
-    <slot></slot>
   </div>
 </template>
 
 <script>
-import Pixels from './pixels';
+import Pixels from './js/pixels';
 
 export default {
   mounted() {

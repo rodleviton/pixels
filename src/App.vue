@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import NavBar from './components/NavBar';
-import Logo from './components/Logo';
+import NavBar from './components/nav-bar';
+import Logo from './components/logo';
 
 export default {
   name: 'app',

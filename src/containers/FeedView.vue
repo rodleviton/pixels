@@ -13,59 +13,11 @@
       <router-link to="/card/swanky"></router-link>
       <Swanky></Swanky>
     </Card>
-    <Card name="Griddy" class="animate">
-      <router-link to="/card/griddy"></router-link>
-      <Griddy></Griddy>
-    </Card>
-    <Card name="Yellow Submarine" class="animate">
-      <router-link to="/card/submarine"></router-link>
-      <Submarine></Submarine>
-    </Card>
-    <Card name="Swanky Docs" class="animate">
-      <router-link to="/card/swanky"></router-link>
-      <Swanky></Swanky>
-    </Card>
-    <Card name="Griddy" class="animate">
-      <router-link to="/card/griddy"></router-link>
-      <Griddy></Griddy>
-    </Card>
-    <Card name="Yellow Submarine" class="animate">
-      <router-link to="/card/submarine"></router-link>
-      <Submarine></Submarine>
-    </Card>
-    <Card name="Swanky Docs" class="animate">
-      <router-link to="/card/swanky"></router-link>
-      <Swanky></Swanky>
-    </Card>
-    <Card name="Griddy" class="animate">
-      <router-link to="/card/griddy"></router-link>
-      <Griddy></Griddy>
-    </Card>
-    <Card name="Yellow Submarine" class="animate">
-      <router-link to="/card/submarine"></router-link>
-      <Submarine></Submarine>
-    </Card>
-    <Card name="Swanky Docs" class="animate">
-      <router-link to="/card/swanky"></router-link>
-      <Swanky></Swanky>
-    </Card>
-    <Card name="Griddy" class="animate">
-      <router-link to="/card/griddy"></router-link>
-      <Griddy></Griddy>
-    </Card>
-    <Card name="Yellow Submarine" class="animate">
-      <router-link to="/card/submarine"></router-link>
-      <Submarine></Submarine>
-    </Card>
-    <Card name="Swanky Docs" class="animate">
-      <router-link to="/card/swanky"></router-link>
-      <Swanky></Swanky>
-    </Card>
   </div>
 </template>
 
 <script>
-import Card from './../components/Card';
+import Card from './../components/card';
 
 export default {
   name: 'feed-view',
@@ -121,8 +73,8 @@ export default {
   margin: 0 auto 6rem auto;
   text-indent: -99999em;
   overflow: hidden;
-  width: 146px;
-  height: 34px;
-  background: url('./../assets/logo-text.svg') no-repeat;
+  width: 223px;
+  height: 35px;
+  background: url('./../assets/logo.svg') no-repeat;
 }
 </style>
