@@ -1,7 +1,8 @@
 <template>
   <div class="card-container">
     <div class="card">
-      <slot></slot>
+      <div id="card-content" class="card-content"></div>
+      <img class="card-preloader" src="./../../assets/oval.svg" />
     </div>
     <div class="diffuse-shadow"></div>
     <div class="card-name">{{ name }}</div>
@@ -15,6 +16,17 @@ export default {
 </script>
 
 <style scoped>
+#card-content {
+  position: relative;
+  z-index: 15;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+#card-content.in {
+  opacity: 1;
+}
+
 .card-container {
   display: inline-block;
   position: relative;
@@ -31,7 +43,7 @@ export default {
   transition: all 0.15s cubic-bezier(0.165, 0.84, 0.44, 1);
   border-radius: 12px;
   overflow: hidden;
-  background: #fff;
+  background: #eee;
   height: 460px;
   width: 320px;
 }
@@ -43,6 +55,14 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.card-preloader {
+  top: 50%;
+  left: 50%;
+  z-index: 5;
+  position: absolute;
+  transform: translate(-50%, -50%);
 }
 
 .card-name {

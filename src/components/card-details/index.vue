@@ -1,19 +1,19 @@
 <template>
   <div class="card-details">
     <div class="card-details-inner">
-      <h2>{{ title }}</h2>
+      <h2>{{ card.title }}</h2>
 
-      <div v-html="description"></div>
+      <div v-html="card.description"></div>
 
       <h3>Highights</h3>
       <ul>
-        <li v-for="highlight in highlights"><span>{{ highlight }}</span></li>
+        <li v-for="highlight in card.highlights"><span>{{ highlight }}</span></li>
       </ul>
 
-      <ColourBar :colours="colours"></ColourBar>
+      <ColourBar :colours="card.colours"></ColourBar>
 
       <footer class="details-footer">
-        <a v-bind:href="source" target="_blank" class="link-btn"><i class="icon-github"></i> View source</a>
+        <a v-bind:href="card.source" target="_blank" class="link-btn"><i class="icon-github"></i> View source</a>
       </footer>
     </div>
   </div>
@@ -23,26 +23,9 @@
 import ColourBar from './../colour-bar';
 
 export default {
+  props: ['card'],
   components: {
     ColourBar,
-  },
-  data() {
-    return {
-      title: 'Griddy',
-      description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut egestas sollicitudin urna, non semper nulla. Maecenas iaculis nisl ac ex posuere, et finibus velit interdum. Praesent tortor felis, elementum at semper et, tincidunt placerat arcu. Proin vel posuere risus. Integer quis quam finibus, aliquet libero sit amet, iaculis eros. Maecenas porttitor mollis semper.</p>',
-      colours: [
-        '#7FC6FF',
-        '#488CFF',
-        '#3A57C3',
-        '#373F96',
-        '#272D6B',
-      ],
-      highlights: [
-        'HTML5 Canvas',
-        'CSS3 Transitions',
-      ],
-      source: 'https://github.com/swanky-docs/swanky',
-    };
   },
 };
 

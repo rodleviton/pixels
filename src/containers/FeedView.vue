@@ -1,10 +1,6 @@
 <template>
   <div class="feed-view">
     <h1 class="title">ReactivePixels</h1>
-    <Card name="Griddy" class="animate">
-      <router-link to="/card/griddy"></router-link>
-      <Griddy></Griddy>
-    </Card>
     <Card name="Yellow Submarine" class="animate">
       <router-link to="/card/submarine"></router-link>
       <Submarine></Submarine>
@@ -21,17 +17,9 @@ import Card from './../components/card';
 
 export default {
   name: 'feed-view',
-  data() {
-    return {
-
-    };
-  },
   components: {
     Card,
     /* eslint-disable */
-    Griddy: (resolve) => {
-      require(['./../cards/griddy'], resolve);
-    },
     Submarine: (resolve) => {
       require(['./../cards/submarine'], resolve);
     },
